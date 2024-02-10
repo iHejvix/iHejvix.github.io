@@ -4,8 +4,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Responsive Website in HTML CSS</title>
-    <link rel="stylesheet" href="styles/style.css" />
+    <title>Strona główna</title>
 </head>
 
 <body>
@@ -13,39 +12,20 @@
         /* Import Google font - Poppins */
         @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
-        * {
+        body {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: "Poppins", sans-serif;
-        }
-
-        main {
             background-image: url("images/background.svg");
+            background-size: cover;
+
         }
 
         .container {
             max-width: 1300px;
             width: 100%;
             margin: 0 auto;
-        }
-
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 0;
-        }
-
-        .curveImg {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            pointer-events: none;
         }
 
         .row {
@@ -101,21 +81,12 @@
         }
     </style>
     <main>
-        <!-- Header Start -->
-        <header>
-            <nav class="container">
-                <h2>Java-Kurs.pl</h2>
-            </nav>
-        </header>
-        <!-- Header End -->
-
-        <!-- Hero Start -->
-        <section class="hero">
+        <div class="hero">
             <div class="row container">
                 <div class="column">
-                    <h2>Kurs języka JAWA</h2>
+                    <h2>Kurs języka Java</h2>
                     <p>Naucz się języka programowania
-                        Wybierz język i wypróbuj różne podejścia do jego nauki. Twórz projekty w świecie rzeczywistym,
+                        i wypróbuj różne podejścia do jego nauki. Twórz projekty w świecie rzeczywistym,
                         bierz udział w interaktywnych kursach z przewodnikiem, bierz udział w konkursach
                         programistycznych i wykonuj misje z grami. Znajdź to, co będzie dla Ciebie najlepsze i ciesz się
                         programowaniem!</p>
@@ -126,7 +97,7 @@
                 <div class="column">
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 </body>
 
