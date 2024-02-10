@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Kurs Java</title>
+    <link rel="stylesheet" href="styles/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+</head>
+
+<body>
+<nav class="sidebar">
+    <a href="index.html" class="logo">Kurs Java</a>
+    <div class="menu-content">
+        <ul class="menu-items">
+            <li class="item">
+                <button onclick="openPage(1)">Wstęp</button>
+            </li>
+
+            <li class="item">
+                <button onclick="openPage(2)">Składnia</button>
+            </li>
+
+            <li class="item">
+                <div class="submenu-item">
+                    Wyjścia (output)
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+
+                <ul class="menu-items submenu">
+                    <div class="menu-title">
+                        <i class="fa-solid fa-chevron-left"></i>
+                        Wyjścia (output)
+                    </div>
+                    <li class="item">
+                        <button onclick="openPage(3)">Wyświetlanie tekstu</button>
+                    </li>
+                    <li class="item">
+                        <button onclick="openPage(4)">Wyświetlanie liczb</button>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="item">
+                <button onclick="openPage(5)">Komentarze</button>
+            </li>
+
+            <li class="item">
+                <div class="submenu-item">
+                    Zmienne
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+
+                <ul class="menu-items submenu">
+                    <div class="menu-title">
+                        <i class="fa-solid fa-chevron-left"></i>
+                        Zmienne
+                    </div>
+                    <li class="item">
+                        <button onclick="openPage(6)">Deklarowanie zmiennych</button>
+                    </li>
+                    <li class="item">
+                        <button onclick="openPage(7)">Deklarowanie wielu zmiennych</button>
+                    </li>
+                    <li class="item">
+                        <button onclick="openPage(8)">Nazewnictwo zmiennych</button>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<nav id="navbar">
+    <i class="fa-solid fa-bars" id="sidebar-close"></i>
+</nav>
+
+<main>
+    <iframe id="frame"></iframe>
+
+    <div id="menu">
+        <button type="button" class="menu-button" onclick="previousPage()">
+            <span class="button-text">Cofnij</span>
+            <span class="button-icon">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+            </span>
+        </button>
+        <button type="button" class="menu-button" onclick="nextPage()">
+            <span class="button-icon">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+            </span>
+            <span class="button-text">Następne</span>
+        </button>
+        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    </div>
+</main>
+</body>
+<script src="scripts/pages.js"></script>
+<script>
+    const sidebar = document.querySelector(".sidebar");
+    const sidebarClose = document.querySelector("#sidebar-close");
+    const menu = document.querySelector(".menu-content");
+    const menuItems = document.querySelectorAll(".submenu-item");
+    const subMenuTitles = document.querySelectorAll(".submenu .menu-title");
+
+    sidebarClose.addEventListener("click", () => sidebar.classList.toggle("close"));
+
+    menuItems.forEach((item, index) => {
+        item.addEventListener("click", () => {
+            menu.classList.add("submenu-active");
+            item.classList.add("show-submenu");
+            menuItems.forEach((item2, index2) => {
+                if (course !== index2) {
+                    item2.classList.remove("show-submenu");
+                }
+            });
+        });
+    });
+
+    subMenuTitles.forEach((title) => {
+        title.addEventListener("click", () => {
+            menu.classList.remove("submenu-active");
+        });
+    });
+</script>
+
+</html>

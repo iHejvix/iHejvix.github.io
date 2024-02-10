@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- Coding by CodingNepal || www.codingnepalweb.com -->
+<html lang="pl">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Responsive Website in HTML CSS</title>
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+    <style>
+        /* Import Google font - Poppins */
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        main {
+            background-image: url("images/background.svg");
+        }
+
+        .container {
+            max-width: 1300px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 0;
+        }
+
+        .curveImg {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            pointer-events: none;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            height: 100%;
+            width: 100%;
+            padding: 0 60px;
+            gap: 30px;
+            justify-content: space-between;
+        }
+
+        h2,
+        p {
+            color: #fff;
+        }
+
+        .hero .row h2 {
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+
+        .hero .column {
+            width: 50%;
+        }
+
+        .buttons {
+            display: flex;
+            margin-top: 25px;
+            gap: 10px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+
+        .btn {
+            padding: 14px 26px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid #fff;
+            background: transparent;
+            color: #fff;
+        }
+
+        .btn:hover {
+            background-color: #fff;
+            color: #333;
+        }
+    </style>
+    <main>
+        <!-- Header Start -->
+        <header>
+            <nav class="container">
+                <h2>Java-Kurs.pl</h2>
+            </nav>
+        </header>
+        <!-- Header End -->
+
+        <!-- Hero Start -->
+        <section class="hero">
+            <div class="row container">
+                <div class="column">
+                    <h2>Kurs języka JAWA</h2>
+                    <p>Naucz się języka programowania
+                        Wybierz język i wypróbuj różne podejścia do jego nauki. Twórz projekty w świecie rzeczywistym,
+                        bierz udział w interaktywnych kursach z przewodnikiem, bierz udział w konkursach
+                        programistycznych i wykonuj misje z grami. Znajdź to, co będzie dla Ciebie najlepsze i ciesz się
+                        programowaniem!</p>
+                    <div class="buttons">
+                        <a class="btn" href="index.html">Rozpocznij</a>
+                    </div>
+                </div>
+                <div class="column">
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
