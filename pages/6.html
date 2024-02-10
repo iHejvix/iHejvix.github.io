@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Deklarowanie zmiennych</title>
+    <link rel="stylesheet" href="../styles/page-style.css"/>
+    <link rel="stylesheet" href="../styles/snippet.css"/>
+    <script src="../scripts/snippet.js"></script>
+</head>
+<body>
+<h1>Typy zmiennych</h1>
+<p>Zmienne są kontenerami do przechowywania wartości danych. W Javie istnieją różne typy zmiennych, na przykład:</p>
+<ul>
+    <li>String - przechowuje tekst, np. „Hello”,</li>
+    <li>int - przechowuje liczby całkowite (integers), bez miejsc dziesiętnych, np. 123 lub -8,</li>
+    <li>float - przechowuje liczby zmiennoprzecinkowe, np. 19.99 lub -67.7,</li>
+    <li>char - przechowuje pojedyncze znaki, takie jak 'a' lub '*',</li>
+    <li>boolean - przechowuje wartości logiczne: true lub false.</li>
+</ul>
+<hr>
+<h1>Deklarowanie (tworzenie) zmiennych</h1>
+<p>Aby utworzyć zmienną należy określić jej typ i przypisać wartość:</p>
+<pre><code class="language-java">typ nazwa = wartość</code></pre>
+<p>
+    W tym przypadku <i>typ</i> jest jednym z typów zmiennych (np. int lub String), a <i>nazwa</i> jest nazwą zmiennej
+    (np. "x" lub "nazwa"). Znak równości służy do przypisania wartości zmiennej.
+</p>
+<p>Aby utworzyć zmienną, która powinna przechowywać tekst, spójrz na następujący przykład:</p>
+<pre><code class="language-java">String name = "John";
+System.out.println(name);</code></pre>
+<p>Aby utworzyć zmienną, która powinna przechowywać liczbę, spójrz na następujący przykład:</p>
+<pre><code class="language-java">int number = 15;
+System.out.println(number);</code></pre>
+<p>Możesz także zadeklarować zmienną bez przypisywania wartości i przypisać ją później:</p>
+<pre><code class="language-java">int number;
+number = 15;
+System.out.println(number);</code></pre>
+<hr>
+<h1>Zmienne finalne</h1>
+<p>
+    Jeśli nie chcesz, aby inni (lub Ty) nadpisywali istniejące wartości, użyj słowa kluczowego <i>final</i> (spowoduje
+    to zadeklarowanie zmiennej jako „końcowej” lub „stałej”, co oznacza niezmienną i tylko do odczytu):
+</p>
+<pre><code class="language-java">final int number = 15;
+number = 20; // To spowoduje błąd: nie można przypisać wartości do zmiennej finalnej</code></pre>
+</body>
+</html>

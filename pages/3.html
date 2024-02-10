@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Wyświetlanie tekstu</title>
+    <link rel="stylesheet" href="../styles/page-style.css"/>
+    <link rel="stylesheet" href="../styles/snippet.css"/>
+    <script src="../scripts/snippet.js"></script>
+</head>
+<body>
+<h1>Wyświetlanie tekstu</h1>
+<p>W poprzednim rozdziale dowiedziałeś się, że możesz użyć metody <i>println()</i>, aby wyświetlić tekst w konsoli:</p>
+<pre><code class="language-java">System.out.println("Hello World!");</code></pre>
+<p>Możesz dodać dowolną liczbę metod <i>println()</i>. Pamiętaj, że każda doda nową linię:</p>
+<pre><code class="language-java">System.out.println("Hello World!");
+System.out.println("Uczę się Javy.");
+System.out.println("I jest świetnie!");</code></pre>
+<hr>
+<h1>Cudzysłów podwójny</h1>
+<p>
+    Kiedy pracujesz z tekstem, musisz umieścić go wewnątrz podwójnego cudzysłowu: <i>""</i>. Jeśli o tym zapomnisz,
+    wystapi błąd:
+</p>
+<pre><code class="language-java">System.out.println("To zadziała poprawnie!");</code></pre>
+<pre><code class="language-java">System.out.println(To spowoduje błąd!);</code></pre>
+<hr>
+<h1>Metoda <i>print()</i></h1>
+<p>
+    Dostępna jest również metoda <i>print()</i>, podobna do <i>println()</i>. Jedyna różnica polega na tym, że ta
+    pierwsza nie doda nowej linii na końcu tekstu:
+</p>
+<pre><code class="language-java">System.out.print("Hello World! ");
+System.out.print("To wyświetli się w tej samej linii.");
+</code></pre>
+</body>
+</html>

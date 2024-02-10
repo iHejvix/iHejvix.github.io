@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Komentarze</title>
+    <link rel="stylesheet" href="../styles/page-style.css"/>
+    <link rel="stylesheet" href="../styles/snippet.css"/>
+    <script src="../scripts/snippet.js"></script>
+</head>
+<body>
+<h1>Komentarze</h1>
+<p>
+    Komentarzy można używać do dokumentowania kodu i zwiększania jego czytelności. Można go również użyć do zapobiegania
+    wykonaniu podczas testowania kodu alternatywnego.
+</p>
+<hr>
+<h1>Komentarze jednoliniowe</h1>
+<p>
+    Komentarze jednoliniowe zaczynają się od dwóch ukośników (<i>//</i>). Każdy tekst pomiędzy <i>//</i> a końcem
+    linii jest ignorowany przez Javę (nie zostanie wykonany). Poniższe przykłady przedstawiają sposób użycia tego typu
+    komentarzy:
+</p>
+<pre><code class="language-java">// To jest komentarz
+System.out.println("Hello World!");</code></pre>
+<pre><code class="language-java">System.out.println("Hello World!"); // To jest komentarz</code></pre>
+<hr>
+<h1>Komentarze wieloliniowe</h1>
+<p>Komentarze wieloliniowe zaczynają się od <i>/*</i> a kończą <i>*/</i>.</p>
+<pre><code class="language-java">/* To jest komentarz
+wieloliniowy */
+System.out.println("Hello World!");</code></pre>
+</body>
+</html>

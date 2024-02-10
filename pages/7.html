@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Deklarowanie wielu zmiennych</title>
+    <link rel="stylesheet" href="../styles/page-style.css"/>
+    <link rel="stylesheet" href="../styles/snippet.css"/>
+    <script src="../scripts/snippet.js"></script>
+</head>
+<body>
+<h1>Deklarowanie wielu zmiennych</h1>
+<p>Aby zadeklarować więcej niż jedną zmienną tego samego typu, możesz użyć listy oddzielonej przecinkami:</p>
+<pre><code class="language-java">int x = 5, y = 6, z = 50;
+System.out.println(x + y + z);</code></pre>
+<p>Powyższy kod znacznie skraca swoją pełną wersję:</p>
+<pre><code class="language-java">int x = 5;
+int y = 6;
+int z = 50;
+System.out.println(x + y + z);</code></pre>
+<hr>
+<h1>Jedna wartość dla wielu zmiennych</h1>
+<p>Możesz także przypisać tę samą wartość do wielu zmiennych w jednym wierszu:</p>
+<pre><code class="language-java">int x, y, z;
+x = y = z = 50;
+System.out.println(x + y + z);</code></pre>
+</body>
+</html>
