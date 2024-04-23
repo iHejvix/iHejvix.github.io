@@ -1,104 +1,39 @@
 <!DOCTYPE html>
-<!-- Coding by CodingNepal || www.codingnepalweb.com -->
 <html lang="pl">
-
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Strona główna</title>
+    <meta charset="UTF-8">
+    <title>Metoda bisekcji</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
-
 <body>
-    <style>
-        /* Import Google font - Poppins */
-        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-
-        body {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Poppins", sans-serif;
-            background-image: url("images/background.svg");
-            background-size: cover;
-
-        }
-
-        .container {
-            max-width: 1300px;
-            width: 100%;
-            margin: 0 auto;
-        }
-
-        .row {
-            display: flex;
-            align-items: center;
-            min-height: 100vh;
-            height: 100%;
-            width: 100%;
-            padding: 0 60px;
-            gap: 30px;
-            justify-content: space-between;
-        }
-
-        h2,
-        p {
-            color: #fff;
-        }
-
-        .hero .row h2 {
-            font-size: 36px;
-            margin-bottom: 16px;
-        }
-
-        .hero .column {
-            width: 50%;
-        }
-
-        .buttons {
-            display: flex;
-            margin-top: 25px;
-            gap: 10px;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-
-
-        .btn {
-            padding: 14px 26px;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: 2px solid #fff;
-            background: transparent;
-            color: #fff;
-        }
-
-        .btn:hover {
-            background-color: #fff;
-            color: #333;
-        }
-    </style>
-    <main>
-        <div class="hero">
-            <div class="row container">
-                <div class="column">
-                    <h2>Kurs języka Java</h2>
-                    <p>Naucz się języka programowania
-                        i wypróbuj różne podejścia do jego nauki. Twórz projekty w świecie rzeczywistym,
-                        bierz udział w interaktywnych kursach z przewodnikiem, bierz udział w konkursach
-                        programistycznych i wykonuj misje z grami. Znajdź to, co będzie dla Ciebie najlepsze i ciesz się
-                        programowaniem!</p>
-                    <div class="buttons">
-                        <a class="btn" href="course.html">Rozpocznij</a>
-                    </div>
-                </div>
-                <div class="column">
-                </div>
-            </div>
-        </div>
-    </main>
+<nav>
+    Znajdowanie pierwsiastów wielomianu metodą biesekcji
+</nav>
+<div id="container">
+    <label>
+        Zapisz wielomian. Pamiętaj o wszystkich współczynnikach (w tym 0 i 1):
+        <input type="text" id="value" placeholder="1x^2+0x+0">
+    </label> <br><br>
+    <label>
+        Podaj stopień wielomianu:
+        <input type="number" id = "stopien">
+    </label> <br><br>
+    <label>
+        <p>Dokładność:</p>
+        <input type="number" id="st">
+    </label><br><br>
+    <p>Podaj zakres:</p>
+    <label>
+        Od:
+        <input type="number" id="z">
+    </label>
+    <label>
+        Do:
+        <input type="number" id="do">
+    </label><br><br>
+    <input type="button" onclick="result()" value="Oblicz">
+    <div id="result"></div>
+</div>
 </body>
-
 </html>
